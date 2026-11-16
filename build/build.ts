@@ -191,7 +191,7 @@ function soundsAlike(t: Thing, roughMax: number) {
 	const pairs: number[] = [];
 	for (let i = 0; i < t.notes.length; i++) for (let j = i + 1; j < t.notes.length; j++) pairs.push(t.notes[j] - t.notes[i]);
 	const above = t.notes.slice(1);
-	return [...blurred(pairs), ...blurred(above), 2 * (roughness(t.notes.map((n) => 60 + n)) / roughMax), 0.5 * (t.notes.length - 2)];
+	return [...blurred(pairs), ...blurred(above), 4 * (roughness(t.notes.map((n) => 60 + n)) / roughMax), 2 * (t.notes.length - 2)];
 }
 
 function npy(rows: number[][]) {

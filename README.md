@@ -98,15 +98,41 @@ notes, not from listening tests or from a trained model.
   minor triad (3, 7), which have the same pairs of distances.
 - **how rough it sounds when played together.** This is Sethares' sensory dissonance, after Plomp and Levelt: the
   sum, over every pair of partials of two different notes of this tone, of the smaller amplitude times
-  e^(−3.5·s·Δf) − e^(−5.75·s·Δf), where s = 0.24 / (0.0207·f_low + 18.96). It is scaled so the roughest is 2.
+  e^(−3.5·s·Δf) − e^(−5.75·s·Δf), where s = 0.24 / (0.0207·f_low + 18.96). It is scaled so the roughest is 4.
   This puts the smooth intervals (octave, fifth, fourth, unison) near each other and apart from the rough ones.
-- **how many notes it has,** less 2, times 0.5. This keeps intervals and chords apart.
+- **how many notes it has,** less 2, times 2. This keeps intervals and chords apart.
 
 The vectors are centred, and scaled so that the median row is 1 from the centre. One interval or chord has one
 vector, however it is played and from whichever note: it describes what the thing is, which is what gets mixed up.
 
-**What it is not.** The weights (the 0.6 blur, the 2 for roughness, the 0.5 for the number of notes) are my
-choices, made so that each part counts. They are not fitted to how people actually confuse these sounds.
+**What it is not.** The weights (the 0.6 blur, the 4 for roughness, the 2 for the number of notes) are my
+choices. I picked them by looking at each one's nearest neighbours: an interval's nearest are intervals, the octave is next to the unison and the fifth, and the thirds are next to each other. They are not fitted to how people actually confuse these sounds.
+
+The nearest three, for each:
+
+    unison                     minor second, octave, perfect fifth
+    minor second               major second, unison, minor third
+    major second               minor third, minor second, unison
+    minor third                major third, major second, minor triad
+    major third                minor third, perfect fourth, augmented triad
+    perfect fourth             tritone, major third, octave
+    tritone                    perfect fourth, perfect fifth, octave
+    perfect fifth              minor sixth, tritone, octave
+    minor sixth                major sixth, perfect fifth, octave
+    major sixth                minor seventh, minor sixth, octave
+    minor seventh              major seventh, major sixth, octave
+    major seventh              octave, minor seventh, unison
+    octave                     major seventh, unison, minor seventh
+    major triad                minor triad, augmented triad, diminished triad
+    minor triad                major triad, diminished triad, augmented triad
+    diminished triad           minor triad, major triad, augmented triad
+    augmented triad            major triad, minor triad, diminished triad
+    dominant seventh chord     minor seventh chord, half-diminished chord, major seventh chord
+    major seventh chord        dominant seventh chord, minor seventh chord, half-diminished chord
+    minor seventh chord        dominant seventh chord, half-diminished chord, major seventh chord
+    half-diminished chord      minor seventh chord, dominant seventh chord, diminished seventh chord
+    diminished seventh chord   half-diminished chord, dominant seventh chord, minor seventh chord
+
 
 ## Building it
 
