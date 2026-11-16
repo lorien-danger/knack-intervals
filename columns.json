@@ -12,10 +12,10 @@
    ]
   },
   {
-   "name": "How many semitones?",
+   "name": "What kind is it?",
    "columns": [
     "sound",
-    "semitones"
+    "kind"
    ]
   },
   {
@@ -41,8 +41,7 @@
   {
    "name": "semitones",
    "type": "number",
-   "label": "Semitones",
-   "unit": "semitones"
+   "label": "Semitones"
   },
   {
    "name": "kind",

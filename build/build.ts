@@ -62,7 +62,7 @@ const CHORDS: [string, string, string, string, number[], string[]][] = [
 	['maj7', 'major seventh chord', 'seventh chord', 'major seventh', [0, 4, 7, 11], ['1', '3', '5', '7']],
 	['min7', 'minor seventh chord', 'seventh chord', 'minor seventh', [0, 3, 7, 10], ['1', '♭3', '5', '♭7']],
 	['m7b5', 'half-diminished chord', 'seventh chord', 'half-diminished seventh', [0, 3, 6, 10], ['1', '♭3', '♭5', '♭7']],
-	['dim7', 'diminished seventh chord', 'seventh chord', 'diminished seventh', [0, 3, 6, 9], ['1', '♭3', '♭5', '𝄫7']]
+	['dim7', 'diminished seventh chord', 'seventh chord', 'diminished seventh', [0, 3, 6, 9], ['1', '♭3', '♭5', '♭♭7']]
 ];
 
 const things: Thing[] = [
@@ -260,13 +260,13 @@ const columns = {
 	title: 'name',
 	practices: [
 		{ name: 'Name what you hear', columns: ['sound', 'name'] },
-		{ name: 'How many semitones?', columns: ['sound', 'semitones'] },
+		{ name: 'What kind is it?', columns: ['sound', 'kind'] },
 		{ name: 'What notes are in it?', columns: ['sound', 'formula'] }
 	],
 	columns: [
 		{ name: 'sound', type: 'plain', media: 'audio', label: 'Sound' },
 		{ name: 'name', type: 'plain', label: 'Name' },
-		{ name: 'semitones', type: 'number', label: 'Semitones', unit: 'semitones' },
+		{ name: 'semitones', type: 'number', label: 'Semitones' },
 		{ name: 'kind', type: 'tree', label: 'What it is' },
 		{ name: 'formula', type: 'parts', label: 'Notes above the root' },
 		{ name: 'played', type: 'plain', label: 'Played', order: ['in turn, rising', 'in turn, falling', 'together'] },
