@@ -267,7 +267,7 @@ const columns = {
 		{ name: 'sound', type: 'plain', media: 'audio', label: 'Sound' },
 		{ name: 'name', type: 'plain', label: 'Name' },
 		{ name: 'semitones', type: 'number', label: 'Semitones' },
-		{ name: 'kind', type: 'tree', label: 'What it is' },
+		{ name: 'kind', type: 'tree', label: 'Kind' },
 		{ name: 'formula', type: 'parts', label: 'Notes above the root' },
 		{ name: 'played', type: 'plain', label: 'Played', order: ['in turn, rising', 'in turn, falling', 'together'] },
 		{ name: 'starting note', type: 'plain', label: 'Starting note', order: START.map(([n]) => n) },

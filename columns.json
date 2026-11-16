@@ -46,7 +46,7 @@
   {
    "name": "kind",
    "type": "tree",
-   "label": "What it is"
+   "label": "Kind"
   },
   {
    "name": "formula",
