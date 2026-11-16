@@ -1,0 +1,224 @@
+{"id":"unison-rising-a3","played":"in turn, rising","notes":["A3","A3"],"hz":[220,220]}
+{"id":"unison-rising-c4","played":"in turn, rising","notes":["C4","C4"],"hz":[261.63,261.63]}
+{"id":"unison-rising-eb4","played":"in turn, rising","notes":["E♭4","E♭4"],"hz":[311.13,311.13]}
+{"id":"unison-rising-fs4","played":"in turn, rising","notes":["F♯4","F♯4"],"hz":[369.99,369.99]}
+{"id":"unison-together-a3","played":"together","notes":["A3","A3"],"hz":[220,220]}
+{"id":"unison-together-c4","played":"together","notes":["C4","C4"],"hz":[261.63,261.63]}
+{"id":"unison-together-eb4","played":"together","notes":["E♭4","E♭4"],"hz":[311.13,311.13]}
+{"id":"unison-together-fs4","played":"together","notes":["F♯4","F♯4"],"hz":[369.99,369.99]}
+{"id":"minor2-rising-a3","played":"in turn, rising","notes":["A3","B♭3"],"hz":[220,233.08]}
+{"id":"minor2-rising-c4","played":"in turn, rising","notes":["C4","C♯4"],"hz":[261.63,277.18]}
+{"id":"minor2-rising-eb4","played":"in turn, rising","notes":["E♭4","E4"],"hz":[311.13,329.63]}
+{"id":"minor2-rising-fs4","played":"in turn, rising","notes":["F♯4","G4"],"hz":[369.99,392]}
+{"id":"minor2-falling-a3","played":"in turn, falling","notes":["A3","A♭3"],"hz":[220,207.65]}
+{"id":"minor2-falling-c4","played":"in turn, falling","notes":["C4","B3"],"hz":[261.63,246.94]}
+{"id":"minor2-falling-eb4","played":"in turn, falling","notes":["E♭4","D4"],"hz":[311.13,293.66]}
+{"id":"minor2-falling-fs4","played":"in turn, falling","notes":["F♯4","F4"],"hz":[369.99,349.23]}
+{"id":"minor2-together-a3","played":"together","notes":["A3","B♭3"],"hz":[220,233.08]}
+{"id":"minor2-together-c4","played":"together","notes":["C4","C♯4"],"hz":[261.63,277.18]}
+{"id":"minor2-together-eb4","played":"together","notes":["E♭4","E4"],"hz":[311.13,329.63]}
+{"id":"minor2-together-fs4","played":"together","notes":["F♯4","G4"],"hz":[369.99,392]}
+{"id":"major2-rising-a3","played":"in turn, rising","notes":["A3","B3"],"hz":[220,246.94]}
+{"id":"major2-rising-c4","played":"in turn, rising","notes":["C4","D4"],"hz":[261.63,293.66]}
+{"id":"major2-rising-eb4","played":"in turn, rising","notes":["E♭4","F4"],"hz":[311.13,349.23]}
+{"id":"major2-rising-fs4","played":"in turn, rising","notes":["F♯4","A♭4"],"hz":[369.99,415.3]}
+{"id":"major2-falling-a3","played":"in turn, falling","notes":["A3","G3"],"hz":[220,196]}
+{"id":"major2-falling-c4","played":"in turn, falling","notes":["C4","B♭3"],"hz":[261.63,233.08]}
+{"id":"major2-falling-eb4","played":"in turn, falling","notes":["E♭4","C♯4"],"hz":[311.13,277.18]}
+{"id":"major2-falling-fs4","played":"in turn, falling","notes":["F♯4","E4"],"hz":[369.99,329.63]}
+{"id":"major2-together-a3","played":"together","notes":["A3","B3"],"hz":[220,246.94]}
+{"id":"major2-together-c4","played":"together","notes":["C4","D4"],"hz":[261.63,293.66]}
+{"id":"major2-together-eb4","played":"together","notes":["E♭4","F4"],"hz":[311.13,349.23]}
+{"id":"major2-together-fs4","played":"together","notes":["F♯4","A♭4"],"hz":[369.99,415.3]}
+{"id":"minor3-rising-a3","played":"in turn, rising","notes":["A3","C4"],"hz":[220,261.63]}
+{"id":"minor3-rising-c4","played":"in turn, rising","notes":["C4","E♭4"],"hz":[261.63,311.13]}
+{"id":"minor3-rising-eb4","played":"in turn, rising","notes":["E♭4","F♯4"],"hz":[311.13,369.99]}
+{"id":"minor3-rising-fs4","played":"in turn, rising","notes":["F♯4","A4"],"hz":[369.99,440]}
+{"id":"minor3-falling-a3","played":"in turn, falling","notes":["A3","F♯3"],"hz":[220,185]}
+{"id":"minor3-falling-c4","played":"in turn, falling","notes":["C4","A3"],"hz":[261.63,220]}
+{"id":"minor3-falling-eb4","played":"in turn, falling","notes":["E♭4","C4"],"hz":[311.13,261.63]}
+{"id":"minor3-falling-fs4","played":"in turn, falling","notes":["F♯4","E♭4"],"hz":[369.99,311.13]}
+{"id":"minor3-together-a3","played":"together","notes":["A3","C4"],"hz":[220,261.63]}
+{"id":"minor3-together-c4","played":"together","notes":["C4","E♭4"],"hz":[261.63,311.13]}
+{"id":"minor3-together-eb4","played":"together","notes":["E♭4","F♯4"],"hz":[311.13,369.99]}
+{"id":"minor3-together-fs4","played":"together","notes":["F♯4","A4"],"hz":[369.99,440]}
+{"id":"major3-rising-a3","played":"in turn, rising","notes":["A3","C♯4"],"hz":[220,277.18]}
+{"id":"major3-rising-c4","played":"in turn, rising","notes":["C4","E4"],"hz":[261.63,329.63]}
+{"id":"major3-rising-eb4","played":"in turn, rising","notes":["E♭4","G4"],"hz":[311.13,392]}
+{"id":"major3-rising-fs4","played":"in turn, rising","notes":["F♯4","B♭4"],"hz":[369.99,466.16]}
+{"id":"major3-falling-a3","played":"in turn, falling","notes":["A3","F3"],"hz":[220,174.61]}
+{"id":"major3-falling-c4","played":"in turn, falling","notes":["C4","A♭3"],"hz":[261.63,207.65]}
+{"id":"major3-falling-eb4","played":"in turn, falling","notes":["E♭4","B3"],"hz":[311.13,246.94]}
+{"id":"major3-falling-fs4","played":"in turn, falling","notes":["F♯4","D4"],"hz":[369.99,293.66]}
+{"id":"major3-together-a3","played":"together","notes":["A3","C♯4"],"hz":[220,277.18]}
+{"id":"major3-together-c4","played":"together","notes":["C4","E4"],"hz":[261.63,329.63]}
+{"id":"major3-together-eb4","played":"together","notes":["E♭4","G4"],"hz":[311.13,392]}
+{"id":"major3-together-fs4","played":"together","notes":["F♯4","B♭4"],"hz":[369.99,466.16]}
+{"id":"P4-rising-a3","played":"in turn, rising","notes":["A3","D4"],"hz":[220,293.66]}
+{"id":"P4-rising-c4","played":"in turn, rising","notes":["C4","F4"],"hz":[261.63,349.23]}
+{"id":"P4-rising-eb4","played":"in turn, rising","notes":["E♭4","A♭4"],"hz":[311.13,415.3]}
+{"id":"P4-rising-fs4","played":"in turn, rising","notes":["F♯4","B4"],"hz":[369.99,493.88]}
+{"id":"P4-falling-a3","played":"in turn, falling","notes":["A3","E3"],"hz":[220,164.81]}
+{"id":"P4-falling-c4","played":"in turn, falling","notes":["C4","G3"],"hz":[261.63,196]}
+{"id":"P4-falling-eb4","played":"in turn, falling","notes":["E♭4","B♭3"],"hz":[311.13,233.08]}
+{"id":"P4-falling-fs4","played":"in turn, falling","notes":["F♯4","C♯4"],"hz":[369.99,277.18]}
+{"id":"P4-together-a3","played":"together","notes":["A3","D4"],"hz":[220,293.66]}
+{"id":"P4-together-c4","played":"together","notes":["C4","F4"],"hz":[261.63,349.23]}
+{"id":"P4-together-eb4","played":"together","notes":["E♭4","A♭4"],"hz":[311.13,415.3]}
+{"id":"P4-together-fs4","played":"together","notes":["F♯4","B4"],"hz":[369.99,493.88]}
+{"id":"TT-rising-a3","played":"in turn, rising","notes":["A3","E♭4"],"hz":[220,311.13]}
+{"id":"TT-rising-c4","played":"in turn, rising","notes":["C4","F♯4"],"hz":[261.63,369.99]}
+{"id":"TT-rising-eb4","played":"in turn, rising","notes":["E♭4","A4"],"hz":[311.13,440]}
+{"id":"TT-rising-fs4","played":"in turn, rising","notes":["F♯4","C5"],"hz":[369.99,523.25]}
+{"id":"TT-falling-a3","played":"in turn, falling","notes":["A3","E♭3"],"hz":[220,155.56]}
+{"id":"TT-falling-c4","played":"in turn, falling","notes":["C4","F♯3"],"hz":[261.63,185]}
+{"id":"TT-falling-eb4","played":"in turn, falling","notes":["E♭4","A3"],"hz":[311.13,220]}
+{"id":"TT-falling-fs4","played":"in turn, falling","notes":["F♯4","C4"],"hz":[369.99,261.63]}
+{"id":"TT-together-a3","played":"together","notes":["A3","E♭4"],"hz":[220,311.13]}
+{"id":"TT-together-c4","played":"together","notes":["C4","F♯4"],"hz":[261.63,369.99]}
+{"id":"TT-together-eb4","played":"together","notes":["E♭4","A4"],"hz":[311.13,440]}
+{"id":"TT-together-fs4","played":"together","notes":["F♯4","C5"],"hz":[369.99,523.25]}
+{"id":"P5-rising-a3","played":"in turn, rising","notes":["A3","E4"],"hz":[220,329.63]}
+{"id":"P5-rising-c4","played":"in turn, rising","notes":["C4","G4"],"hz":[261.63,392]}
+{"id":"P5-rising-eb4","played":"in turn, rising","notes":["E♭4","B♭4"],"hz":[311.13,466.16]}
+{"id":"P5-rising-fs4","played":"in turn, rising","notes":["F♯4","C♯5"],"hz":[369.99,554.37]}
+{"id":"P5-falling-a3","played":"in turn, falling","notes":["A3","D3"],"hz":[220,146.83]}
+{"id":"P5-falling-c4","played":"in turn, falling","notes":["C4","F3"],"hz":[261.63,174.61]}
+{"id":"P5-falling-eb4","played":"in turn, falling","notes":["E♭4","A♭3"],"hz":[311.13,207.65]}
+{"id":"P5-falling-fs4","played":"in turn, falling","notes":["F♯4","B3"],"hz":[369.99,246.94]}
+{"id":"P5-together-a3","played":"together","notes":["A3","E4"],"hz":[220,329.63]}
+{"id":"P5-together-c4","played":"together","notes":["C4","G4"],"hz":[261.63,392]}
+{"id":"P5-together-eb4","played":"together","notes":["E♭4","B♭4"],"hz":[311.13,466.16]}
+{"id":"P5-together-fs4","played":"together","notes":["F♯4","C♯5"],"hz":[369.99,554.37]}
+{"id":"minor6-rising-a3","played":"in turn, rising","notes":["A3","F4"],"hz":[220,349.23]}
+{"id":"minor6-rising-c4","played":"in turn, rising","notes":["C4","A♭4"],"hz":[261.63,415.3]}
+{"id":"minor6-rising-eb4","played":"in turn, rising","notes":["E♭4","B4"],"hz":[311.13,493.88]}
+{"id":"minor6-rising-fs4","played":"in turn, rising","notes":["F♯4","D5"],"hz":[369.99,587.33]}
+{"id":"minor6-falling-a3","played":"in turn, falling","notes":["A3","C♯3"],"hz":[220,138.59]}
+{"id":"minor6-falling-c4","played":"in turn, falling","notes":["C4","E3"],"hz":[261.63,164.81]}
+{"id":"minor6-falling-eb4","played":"in turn, falling","notes":["E♭4","G3"],"hz":[311.13,196]}
+{"id":"minor6-falling-fs4","played":"in turn, falling","notes":["F♯4","B♭3"],"hz":[369.99,233.08]}
+{"id":"minor6-together-a3","played":"together","notes":["A3","F4"],"hz":[220,349.23]}
+{"id":"minor6-together-c4","played":"together","notes":["C4","A♭4"],"hz":[261.63,415.3]}
+{"id":"minor6-together-eb4","played":"together","notes":["E♭4","B4"],"hz":[311.13,493.88]}
+{"id":"minor6-together-fs4","played":"together","notes":["F♯4","D5"],"hz":[369.99,587.33]}
+{"id":"major6-rising-a3","played":"in turn, rising","notes":["A3","F♯4"],"hz":[220,369.99]}
+{"id":"major6-rising-c4","played":"in turn, rising","notes":["C4","A4"],"hz":[261.63,440]}
+{"id":"major6-rising-eb4","played":"in turn, rising","notes":["E♭4","C5"],"hz":[311.13,523.25]}
+{"id":"major6-rising-fs4","played":"in turn, rising","notes":["F♯4","E♭5"],"hz":[369.99,622.25]}
+{"id":"major6-falling-a3","played":"in turn, falling","notes":["A3","C3"],"hz":[220,130.81]}
+{"id":"major6-falling-c4","played":"in turn, falling","notes":["C4","E♭3"],"hz":[261.63,155.56]}
+{"id":"major6-falling-eb4","played":"in turn, falling","notes":["E♭4","F♯3"],"hz":[311.13,185]}
+{"id":"major6-falling-fs4","played":"in turn, falling","notes":["F♯4","A3"],"hz":[369.99,220]}
+{"id":"major6-together-a3","played":"together","notes":["A3","F♯4"],"hz":[220,369.99]}
+{"id":"major6-together-c4","played":"together","notes":["C4","A4"],"hz":[261.63,440]}
+{"id":"major6-together-eb4","played":"together","notes":["E♭4","C5"],"hz":[311.13,523.25]}
+{"id":"major6-together-fs4","played":"together","notes":["F♯4","E♭5"],"hz":[369.99,622.25]}
+{"id":"minor7-rising-a3","played":"in turn, rising","notes":["A3","G4"],"hz":[220,392]}
+{"id":"minor7-rising-c4","played":"in turn, rising","notes":["C4","B♭4"],"hz":[261.63,466.16]}
+{"id":"minor7-rising-eb4","played":"in turn, rising","notes":["E♭4","C♯5"],"hz":[311.13,554.37]}
+{"id":"minor7-rising-fs4","played":"in turn, rising","notes":["F♯4","E5"],"hz":[369.99,659.26]}
+{"id":"minor7-falling-a3","played":"in turn, falling","notes":["A3","B2"],"hz":[220,123.47]}
+{"id":"minor7-falling-c4","played":"in turn, falling","notes":["C4","D3"],"hz":[261.63,146.83]}
+{"id":"minor7-falling-eb4","played":"in turn, falling","notes":["E♭4","F3"],"hz":[311.13,174.61]}
+{"id":"minor7-falling-fs4","played":"in turn, falling","notes":["F♯4","A♭3"],"hz":[369.99,207.65]}
+{"id":"minor7-together-a3","played":"together","notes":["A3","G4"],"hz":[220,392]}
+{"id":"minor7-together-c4","played":"together","notes":["C4","B♭4"],"hz":[261.63,466.16]}
+{"id":"minor7-together-eb4","played":"together","notes":["E♭4","C♯5"],"hz":[311.13,554.37]}
+{"id":"minor7-together-fs4","played":"together","notes":["F♯4","E5"],"hz":[369.99,659.26]}
+{"id":"major7-rising-a3","played":"in turn, rising","notes":["A3","A♭4"],"hz":[220,415.3]}
+{"id":"major7-rising-c4","played":"in turn, rising","notes":["C4","B4"],"hz":[261.63,493.88]}
+{"id":"major7-rising-eb4","played":"in turn, rising","notes":["E♭4","D5"],"hz":[311.13,587.33]}
+{"id":"major7-rising-fs4","played":"in turn, rising","notes":["F♯4","F5"],"hz":[369.99,698.46]}
+{"id":"major7-falling-a3","played":"in turn, falling","notes":["A3","B♭2"],"hz":[220,116.54]}
+{"id":"major7-falling-c4","played":"in turn, falling","notes":["C4","C♯3"],"hz":[261.63,138.59]}
+{"id":"major7-falling-eb4","played":"in turn, falling","notes":["E♭4","E3"],"hz":[311.13,164.81]}
+{"id":"major7-falling-fs4","played":"in turn, falling","notes":["F♯4","G3"],"hz":[369.99,196]}
+{"id":"major7-together-a3","played":"together","notes":["A3","A♭4"],"hz":[220,415.3]}
+{"id":"major7-together-c4","played":"together","notes":["C4","B4"],"hz":[261.63,493.88]}
+{"id":"major7-together-eb4","played":"together","notes":["E♭4","D5"],"hz":[311.13,587.33]}
+{"id":"major7-together-fs4","played":"together","notes":["F♯4","F5"],"hz":[369.99,698.46]}
+{"id":"P8-rising-a3","played":"in turn, rising","notes":["A3","A4"],"hz":[220,440]}
+{"id":"P8-rising-c4","played":"in turn, rising","notes":["C4","C5"],"hz":[261.63,523.25]}
+{"id":"P8-rising-eb4","played":"in turn, rising","notes":["E♭4","E♭5"],"hz":[311.13,622.25]}
+{"id":"P8-rising-fs4","played":"in turn, rising","notes":["F♯4","F♯5"],"hz":[369.99,739.99]}
+{"id":"P8-falling-a3","played":"in turn, falling","notes":["A3","A2"],"hz":[220,110]}
+{"id":"P8-falling-c4","played":"in turn, falling","notes":["C4","C3"],"hz":[261.63,130.81]}
+{"id":"P8-falling-eb4","played":"in turn, falling","notes":["E♭4","E♭3"],"hz":[311.13,155.56]}
+{"id":"P8-falling-fs4","played":"in turn, falling","notes":["F♯4","F♯3"],"hz":[369.99,185]}
+{"id":"P8-together-a3","played":"together","notes":["A3","A4"],"hz":[220,440]}
+{"id":"P8-together-c4","played":"together","notes":["C4","C5"],"hz":[261.63,523.25]}
+{"id":"P8-together-eb4","played":"together","notes":["E♭4","E♭5"],"hz":[311.13,622.25]}
+{"id":"P8-together-fs4","played":"together","notes":["F♯4","F♯5"],"hz":[369.99,739.99]}
+{"id":"maj-rising-a3","played":"in turn, rising","notes":["A3","C♯4","E4"],"hz":[220,277.18,329.63]}
+{"id":"maj-rising-c4","played":"in turn, rising","notes":["C4","E4","G4"],"hz":[261.63,329.63,392]}
+{"id":"maj-rising-eb4","played":"in turn, rising","notes":["E♭4","G4","B♭4"],"hz":[311.13,392,466.16]}
+{"id":"maj-rising-fs4","played":"in turn, rising","notes":["F♯4","B♭4","C♯5"],"hz":[369.99,466.16,554.37]}
+{"id":"maj-together-a3","played":"together","notes":["A3","C♯4","E4"],"hz":[220,277.18,329.63]}
+{"id":"maj-together-c4","played":"together","notes":["C4","E4","G4"],"hz":[261.63,329.63,392]}
+{"id":"maj-together-eb4","played":"together","notes":["E♭4","G4","B♭4"],"hz":[311.13,392,466.16]}
+{"id":"maj-together-fs4","played":"together","notes":["F♯4","B♭4","C♯5"],"hz":[369.99,466.16,554.37]}
+{"id":"min-rising-a3","played":"in turn, rising","notes":["A3","C4","E4"],"hz":[220,261.63,329.63]}
+{"id":"min-rising-c4","played":"in turn, rising","notes":["C4","E♭4","G4"],"hz":[261.63,311.13,392]}
+{"id":"min-rising-eb4","played":"in turn, rising","notes":["E♭4","F♯4","B♭4"],"hz":[311.13,369.99,466.16]}
+{"id":"min-rising-fs4","played":"in turn, rising","notes":["F♯4","A4","C♯5"],"hz":[369.99,440,554.37]}
+{"id":"min-together-a3","played":"together","notes":["A3","C4","E4"],"hz":[220,261.63,329.63]}
+{"id":"min-together-c4","played":"together","notes":["C4","E♭4","G4"],"hz":[261.63,311.13,392]}
+{"id":"min-together-eb4","played":"together","notes":["E♭4","F♯4","B♭4"],"hz":[311.13,369.99,466.16]}
+{"id":"min-together-fs4","played":"together","notes":["F♯4","A4","C♯5"],"hz":[369.99,440,554.37]}
+{"id":"dim-rising-a3","played":"in turn, rising","notes":["A3","C4","E♭4"],"hz":[220,261.63,311.13]}
+{"id":"dim-rising-c4","played":"in turn, rising","notes":["C4","E♭4","F♯4"],"hz":[261.63,311.13,369.99]}
+{"id":"dim-rising-eb4","played":"in turn, rising","notes":["E♭4","F♯4","A4"],"hz":[311.13,369.99,440]}
+{"id":"dim-rising-fs4","played":"in turn, rising","notes":["F♯4","A4","C5"],"hz":[369.99,440,523.25]}
+{"id":"dim-together-a3","played":"together","notes":["A3","C4","E♭4"],"hz":[220,261.63,311.13]}
+{"id":"dim-together-c4","played":"together","notes":["C4","E♭4","F♯4"],"hz":[261.63,311.13,369.99]}
+{"id":"dim-together-eb4","played":"together","notes":["E♭4","F♯4","A4"],"hz":[311.13,369.99,440]}
+{"id":"dim-together-fs4","played":"together","notes":["F♯4","A4","C5"],"hz":[369.99,440,523.25]}
+{"id":"aug-rising-a3","played":"in turn, rising","notes":["A3","C♯4","F4"],"hz":[220,277.18,349.23]}
+{"id":"aug-rising-c4","played":"in turn, rising","notes":["C4","E4","A♭4"],"hz":[261.63,329.63,415.3]}
+{"id":"aug-rising-eb4","played":"in turn, rising","notes":["E♭4","G4","B4"],"hz":[311.13,392,493.88]}
+{"id":"aug-rising-fs4","played":"in turn, rising","notes":["F♯4","B♭4","D5"],"hz":[369.99,466.16,587.33]}
+{"id":"aug-together-a3","played":"together","notes":["A3","C♯4","F4"],"hz":[220,277.18,349.23]}
+{"id":"aug-together-c4","played":"together","notes":["C4","E4","A♭4"],"hz":[261.63,329.63,415.3]}
+{"id":"aug-together-eb4","played":"together","notes":["E♭4","G4","B4"],"hz":[311.13,392,493.88]}
+{"id":"aug-together-fs4","played":"together","notes":["F♯4","B♭4","D5"],"hz":[369.99,466.16,587.33]}
+{"id":"dom7-rising-a3","played":"in turn, rising","notes":["A3","C♯4","E4","G4"],"hz":[220,277.18,329.63,392]}
+{"id":"dom7-rising-c4","played":"in turn, rising","notes":["C4","E4","G4","B♭4"],"hz":[261.63,329.63,392,466.16]}
+{"id":"dom7-rising-eb4","played":"in turn, rising","notes":["E♭4","G4","B♭4","C♯5"],"hz":[311.13,392,466.16,554.37]}
+{"id":"dom7-rising-fs4","played":"in turn, rising","notes":["F♯4","B♭4","C♯5","E5"],"hz":[369.99,466.16,554.37,659.26]}
+{"id":"dom7-together-a3","played":"together","notes":["A3","C♯4","E4","G4"],"hz":[220,277.18,329.63,392]}
+{"id":"dom7-together-c4","played":"together","notes":["C4","E4","G4","B♭4"],"hz":[261.63,329.63,392,466.16]}
+{"id":"dom7-together-eb4","played":"together","notes":["E♭4","G4","B♭4","C♯5"],"hz":[311.13,392,466.16,554.37]}
+{"id":"dom7-together-fs4","played":"together","notes":["F♯4","B♭4","C♯5","E5"],"hz":[369.99,466.16,554.37,659.26]}
+{"id":"maj7-rising-a3","played":"in turn, rising","notes":["A3","C♯4","E4","A♭4"],"hz":[220,277.18,329.63,415.3]}
+{"id":"maj7-rising-c4","played":"in turn, rising","notes":["C4","E4","G4","B4"],"hz":[261.63,329.63,392,493.88]}
+{"id":"maj7-rising-eb4","played":"in turn, rising","notes":["E♭4","G4","B♭4","D5"],"hz":[311.13,392,466.16,587.33]}
+{"id":"maj7-rising-fs4","played":"in turn, rising","notes":["F♯4","B♭4","C♯5","F5"],"hz":[369.99,466.16,554.37,698.46]}
+{"id":"maj7-together-a3","played":"together","notes":["A3","C♯4","E4","A♭4"],"hz":[220,277.18,329.63,415.3]}
+{"id":"maj7-together-c4","played":"together","notes":["C4","E4","G4","B4"],"hz":[261.63,329.63,392,493.88]}
+{"id":"maj7-together-eb4","played":"together","notes":["E♭4","G4","B♭4","D5"],"hz":[311.13,392,466.16,587.33]}
+{"id":"maj7-together-fs4","played":"together","notes":["F♯4","B♭4","C♯5","F5"],"hz":[369.99,466.16,554.37,698.46]}
+{"id":"min7-rising-a3","played":"in turn, rising","notes":["A3","C4","E4","G4"],"hz":[220,261.63,329.63,392]}
+{"id":"min7-rising-c4","played":"in turn, rising","notes":["C4","E♭4","G4","B♭4"],"hz":[261.63,311.13,392,466.16]}
+{"id":"min7-rising-eb4","played":"in turn, rising","notes":["E♭4","F♯4","B♭4","C♯5"],"hz":[311.13,369.99,466.16,554.37]}
+{"id":"min7-rising-fs4","played":"in turn, rising","notes":["F♯4","A4","C♯5","E5"],"hz":[369.99,440,554.37,659.26]}
+{"id":"min7-together-a3","played":"together","notes":["A3","C4","E4","G4"],"hz":[220,261.63,329.63,392]}
+{"id":"min7-together-c4","played":"together","notes":["C4","E♭4","G4","B♭4"],"hz":[261.63,311.13,392,466.16]}
+{"id":"min7-together-eb4","played":"together","notes":["E♭4","F♯4","B♭4","C♯5"],"hz":[311.13,369.99,466.16,554.37]}
+{"id":"min7-together-fs4","played":"together","notes":["F♯4","A4","C♯5","E5"],"hz":[369.99,440,554.37,659.26]}
+{"id":"m7b5-rising-a3","played":"in turn, rising","notes":["A3","C4","E♭4","G4"],"hz":[220,261.63,311.13,392]}
+{"id":"m7b5-rising-c4","played":"in turn, rising","notes":["C4","E♭4","F♯4","B♭4"],"hz":[261.63,311.13,369.99,466.16]}
+{"id":"m7b5-rising-eb4","played":"in turn, rising","notes":["E♭4","F♯4","A4","C♯5"],"hz":[311.13,369.99,440,554.37]}
+{"id":"m7b5-rising-fs4","played":"in turn, rising","notes":["F♯4","A4","C5","E5"],"hz":[369.99,440,523.25,659.26]}
+{"id":"m7b5-together-a3","played":"together","notes":["A3","C4","E♭4","G4"],"hz":[220,261.63,311.13,392]}
+{"id":"m7b5-together-c4","played":"together","notes":["C4","E♭4","F♯4","B♭4"],"hz":[261.63,311.13,369.99,466.16]}
+{"id":"m7b5-together-eb4","played":"together","notes":["E♭4","F♯4","A4","C♯5"],"hz":[311.13,369.99,440,554.37]}
+{"id":"m7b5-together-fs4","played":"together","notes":["F♯4","A4","C5","E5"],"hz":[369.99,440,523.25,659.26]}
+{"id":"dim7-rising-a3","played":"in turn, rising","notes":["A3","C4","E♭4","F♯4"],"hz":[220,261.63,311.13,369.99]}
+{"id":"dim7-rising-c4","played":"in turn, rising","notes":["C4","E♭4","F♯4","A4"],"hz":[261.63,311.13,369.99,440]}
+{"id":"dim7-rising-eb4","played":"in turn, rising","notes":["E♭4","F♯4","A4","C5"],"hz":[311.13,369.99,440,523.25]}
+{"id":"dim7-rising-fs4","played":"in turn, rising","notes":["F♯4","A4","C5","E♭5"],"hz":[369.99,440,523.25,622.25]}
+{"id":"dim7-together-a3","played":"together","notes":["A3","C4","E♭4","F♯4"],"hz":[220,261.63,311.13,369.99]}
+{"id":"dim7-together-c4","played":"together","notes":["C4","E♭4","F♯4","A4"],"hz":[261.63,311.13,369.99,440]}
+{"id":"dim7-together-eb4","played":"together","notes":["E♭4","F♯4","A4","C5"],"hz":[311.13,369.99,440,523.25]}
+{"id":"dim7-together-fs4","played":"together","notes":["F♯4","A4","C5","E♭5"],"hz":[369.99,440,523.25,622.25]}
