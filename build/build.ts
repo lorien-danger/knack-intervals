@@ -220,7 +220,8 @@ for (const t of things) {
 	const chord = t.notes.length > 2;
 	const ways: Played[] = chord ? ['rising', 'together'] : t.id === 'unison' ? ['rising', 'together'] : ['rising', 'falling', 'together'];
 	for (const played of ways) for (const [start, midi] of START) {
-		const id = `${t.id}-${played}-${start.replace('♭', 'b').replace('♯', 's').toLowerCase()}`;
+		// file names must differ by more than case (m2 and M2 are one file on a Mac): minor2, major2
+		const id = `${t.id.replace(/^m(?=\d$)/, 'minor').replace(/^M(?=\d$)/, 'major')}-${played}-${start.replace('♭', 'b').replace('♯', 's').toLowerCase()}`;
 		const sc = score(t, midi, played);
 		const x = new Float64Array(Math.round(sc.length * RATE));
 		for (const n of sc.notes) note(x, n.m, n.t0, n.t1);
