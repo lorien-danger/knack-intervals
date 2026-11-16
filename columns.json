@@ -1,0 +1,91 @@
+{
+ "name": "Intervals and chords",
+ "item": "sound",
+ "items": "sounds",
+ "title": "name",
+ "practices": [
+  {
+   "name": "Name what you hear",
+   "columns": [
+    "sound",
+    "name"
+   ]
+  },
+  {
+   "name": "How many semitones?",
+   "columns": [
+    "sound",
+    "semitones"
+   ]
+  },
+  {
+   "name": "What notes are in it?",
+   "columns": [
+    "sound",
+    "formula"
+   ]
+  }
+ ],
+ "columns": [
+  {
+   "name": "sound",
+   "type": "plain",
+   "media": "audio",
+   "label": "Sound"
+  },
+  {
+   "name": "name",
+   "type": "plain",
+   "label": "Name"
+  },
+  {
+   "name": "semitones",
+   "type": "number",
+   "label": "Semitones",
+   "unit": "semitones"
+  },
+  {
+   "name": "kind",
+   "type": "tree",
+   "label": "What it is"
+  },
+  {
+   "name": "formula",
+   "type": "parts",
+   "label": "Notes above the root"
+  },
+  {
+   "name": "played",
+   "type": "plain",
+   "label": "Played",
+   "order": [
+    "in turn, rising",
+    "in turn, falling",
+    "together"
+   ]
+  },
+  {
+   "name": "starting note",
+   "type": "plain",
+   "label": "Starting note",
+   "order": [
+    "A3",
+    "C4",
+    "E♭4",
+    "F♯4"
+   ]
+  },
+  {
+   "name": "notes",
+   "type": "ranking",
+   "label": "Notes played"
+  },
+  {
+   "name": "sounds alike",
+   "type": "embedding",
+   "file": "sounds-alike.npy",
+   "of": "name",
+   "model": "interval content and roughness (build/build.ts)"
+  }
+ ]
+}
