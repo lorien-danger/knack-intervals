@@ -266,14 +266,14 @@ const columns = {
 	],
 	columns: [
 		{ name: 'sound', type: 'plain', media: 'audio', label: 'Sound' },
-		{ name: 'name', type: 'plain', label: 'Name' },
+		// which names sound alike is part of the name column, not a column of its own
+		{ name: 'name', type: 'plain', label: 'Name', near: { file: 'sounds-alike.npy', by: 'sounds alike', model: 'interval content and roughness (build/build.ts)' } },
 		{ name: 'semitones', type: 'number', label: 'Semitones' },
 		{ name: 'kind', type: 'tree', label: 'Kind' },
 		{ name: 'formula', type: 'parts', label: 'Notes above the root' },
 		{ name: 'played', type: 'plain', label: 'Played', order: ['in turn, rising', 'in turn, falling', 'together'] },
 		{ name: 'starting note', type: 'plain', label: 'Starting note', order: START.map(([n]) => n) },
-		{ name: 'notes', type: 'ranking', label: 'Notes played' },
-		{ name: 'sounds alike', type: 'embedding', file: 'sounds-alike.npy', of: 'name', model: 'interval content and roughness (build/build.ts)' }
+		{ name: 'notes', type: 'ranking', label: 'Notes played' }
 	]
 };
 await writeFile(join(OUT, 'columns.json'), JSON.stringify(columns, null, 1) + '\n');

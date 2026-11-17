@@ -36,7 +36,12 @@
   {
    "name": "name",
    "type": "plain",
-   "label": "Name"
+   "label": "Name",
+   "near": {
+    "file": "sounds-alike.npy",
+    "by": "sounds alike",
+    "model": "interval content and roughness (build/build.ts)"
+   }
   },
   {
    "name": "semitones",
@@ -78,13 +83,6 @@
    "name": "notes",
    "type": "ranking",
    "label": "Notes played"
-  },
-  {
-   "name": "sounds alike",
-   "type": "embedding",
-   "file": "sounds-alike.npy",
-   "of": "name",
-   "model": "interval content and roughness (build/build.ts)"
   }
  ]
 }
