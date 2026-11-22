@@ -26,14 +26,16 @@ Suggested decks:
 - **What notes are in it?:** sound and formula.
 - **Play what you hear:** sound and keys, with the starting note always shown. You hear it and play it on the
   keyboard, starting from the note you are given; or you see the keys and choose the sound.
-- **Name the keys:** keys and name, with the starting note and how it is played always shown. You see the keys lit
-  (and hear them together) and name what they make; or you are given a name, a starting note and a way of playing,
-  and play it.
+- **Name the keys:** keys and name, with the starting note always shown. You see the keys lit (and hear them
+  together) and name what they make; or you are given a name and a starting note, and play it.
 
 The starting note is shown in both because without it, playing what you hear means knowing a note's pitch by ear
 alone (absolute pitch), which almost nobody can learn; with it, it is what ear training asks: find the other notes
-from one you know. In *Name the keys* how it is played is shown too, so that "minor third from C4" has one answer: C4
-E♭4 rising or together, A3 C4 falling.
+from one you know. It is a guide, not part of the question: Knack counts as right every row that has what the
+question shows. So in *Name the keys*, any minor third this dataset has is right for "minor third" (from C4, C4 E♭4
+rising or A3 C4 falling; from another starting note too), and where a few keyboards are offered it asks for all that
+match. Played on the keyboard, a minor third from a note no row starts on (D4 F4) is no row's keys and is marked
+wrong: the starting note is there to steer you to one that is.
 
 **Why the octave matters.** These are sounds at particular pitches, and the keys are the ones heard: a minor third
 from C4 is C4 and E♭4, and C5 E♭5 would be a different sound. With `"octave": false` any C and E♭ would be right, which
