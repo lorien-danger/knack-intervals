@@ -115,7 +115,7 @@ function rough(f1: number, f2: number, a1: number, a2: number) {
 	return Math.min(a1, a2) * (Math.exp(-3.5 * s * d) - Math.exp(-5.75 * s * d));
 }
 
-/** the roughness between the notes of a chord of this tone (between partials of different notes only) */
+/** the roughness between the notes of a chord of that model tone (between partials of different notes only) */
 function roughness(midis: number[]) {
 	let r = 0;
 	for (let i = 0; i < midis.length; i++) for (let j = i + 1; j < midis.length; j++) {
