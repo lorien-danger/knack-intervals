@@ -1,0 +1,152 @@
+[
+	{
+		"key": 21,
+		"file": "A0.mp3",
+		"cents": 0.5
+	},
+	{
+		"key": 24,
+		"file": "C1.mp3",
+		"cents": -4
+	},
+	{
+		"key": 27,
+		"file": "Ds1.mp3",
+		"cents": -1.2
+	},
+	{
+		"key": 30,
+		"file": "Fs1.mp3",
+		"cents": 2
+	},
+	{
+		"key": 33,
+		"file": "A1.mp3",
+		"cents": 2.2
+	},
+	{
+		"key": 36,
+		"file": "C2.mp3",
+		"cents": -4.1
+	},
+	{
+		"key": 39,
+		"file": "Ds2.mp3",
+		"cents": -4.2
+	},
+	{
+		"key": 42,
+		"file": "Fs2.mp3",
+		"cents": -2.2
+	},
+	{
+		"key": 45,
+		"file": "A2.mp3",
+		"cents": -2
+	},
+	{
+		"key": 48,
+		"file": "C3.mp3",
+		"cents": -4.1
+	},
+	{
+		"key": 51,
+		"file": "Ds3.mp3",
+		"cents": -2.3
+	},
+	{
+		"key": 54,
+		"file": "Fs3.mp3",
+		"cents": -3.8
+	},
+	{
+		"key": 57,
+		"file": "A3.mp3",
+		"cents": 0.1
+	},
+	{
+		"key": 60,
+		"file": "C4.mp3",
+		"cents": -0.7
+	},
+	{
+		"key": 63,
+		"file": "Ds4.mp3",
+		"cents": 0.1
+	},
+	{
+		"key": 66,
+		"file": "Fs4.mp3",
+		"cents": -3.6
+	},
+	{
+		"key": 69,
+		"file": "A4.mp3",
+		"cents": 0.2
+	},
+	{
+		"key": 72,
+		"file": "C5.mp3",
+		"cents": 3.2
+	},
+	{
+		"key": 75,
+		"file": "Ds5.mp3",
+		"cents": 0.8
+	},
+	{
+		"key": 78,
+		"file": "Fs5.mp3",
+		"cents": 1.9
+	},
+	{
+		"key": 81,
+		"file": "A5.mp3",
+		"cents": 3.2
+	},
+	{
+		"key": 84,
+		"file": "C6.mp3",
+		"cents": -1.2
+	},
+	{
+		"key": 87,
+		"file": "Ds6.mp3",
+		"cents": -4.9
+	},
+	{
+		"key": 90,
+		"file": "Fs6.mp3",
+		"cents": -2
+	},
+	{
+		"key": 93,
+		"file": "A6.mp3",
+		"cents": -5.6
+	},
+	{
+		"key": 96,
+		"file": "C7.mp3",
+		"cents": 2.5
+	},
+	{
+		"key": 99,
+		"file": "Ds7.mp3",
+		"cents": -8.4
+	},
+	{
+		"key": 102,
+		"file": "Fs7.mp3",
+		"cents": -9.8
+	},
+	{
+		"key": 105,
+		"file": "A7.mp3",
+		"cents": -2.3
+	},
+	{
+		"key": 108,
+		"file": "C8.mp3",
+		"cents": 9.4
+	}
+]

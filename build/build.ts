@@ -1,25 +1,26 @@
 /**
  * Builds the "Intervals and chords" dataset: ../columns.json, ../rows.jsonl, ../sounds-alike.npy and ../media/*.mp3.
  *
- *   cd build && npm install && npx tsx build.ts
+ *   cd build && npm install && npx tsx build.ts       (needs ffmpeg, with libmp3lame)
  *
- * Every sound is synthesised here, so there is nothing to license: a piano-like tone made of 16 partials (a little
- * stretched, as a piano's strings are), each partial its own pair of slightly detuned "strings" that die away faster
- * the higher it is, struck with a short attack and damped at the end. Equal temperament, A4 = 440 Hz.
- * Encoded as 44.1 kHz mono MP3 at 80 kbit/s (plays in Safari on an iPhone, and everywhere else).
+ * Every sound is played here on Knack's own piano, so that it sounds as the keyboard in the app does: the Salamander
+ * Grand Piano (Alexander Holm, CC-BY 3.0), as the app samples it (piano/samples, the twelve of the app's thirty that
+ * these notes need), played by the app's rules (piano/render.ts, copied unchanged; piano/play.ts). Each sound is
+ * brought to one loudness. Encoded as 44.1 kHz stereo MP3, VBR (LAME -V4), as the app's own script makes them (plays in
+ * Safari on an iPhone, and everywhere else).
  *
  * Rows: the 13 intervals from unison to octave, each played rising, falling (not the unison: the same as rising)
  * and together; and 9 chords, each played rising (one note after another, from the lowest) and together; each from
  * the four starting notes in START. Building it again gives the same files byte for byte (no randomness).
  */
-import { Mp3Encoder } from '@breezystack/lamejs';
+import { gainFor } from './piano/render';
+import { loudness, render, write, type Strike } from './piano/play';
 import { mkdir, readdir, rm, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
 const HERE = new URL('.', import.meta.url).pathname;
 const OUT = join(HERE, '..');
 const RATE = 44100;
-const KBPS = 80;
 
 // --- what there is to hear ------------------------------------------------------------------------------------
 
@@ -78,82 +79,34 @@ const hz = (m: number) => 440 * 2 ** ((m - 69) / 12);
 
 type Played = 'rising' | 'falling' | 'together';
 
-// --- the tone ---------------------------------------------------------------------------------------------------
+// --- the sound: Knack's own piano ------------------------------------------------------------------------------
 
-const PARTIALS = 16;
-const B = 0.00025; // inharmonicity: partial k is at k f sqrt(1 + B k²), as on a piano string
-const DETUNE = 0.7; // cents between the two strings of a partial, for a slow, warm beating
+/** the loudness every sound is brought to (EBU R128 integrated): about the app's own level (a sound here is between
+ * 1.4 dB quieter and 6.4 dB louder than the same notes played by the app's rules, before levelling) */
+const TARGET = -20;
 
-/** how loud each partial is struck: falling with k, with a dip near the 8th (a hammer striking 1/8 of the way along) */
-const strike = (k: number) => (0.25 + 0.75 * Math.abs(Math.sin((Math.PI * k) / 8.5))) / k ** 1.15;
-
-/** add one note to `out`: struck at `t0` (s), damped at `t1` */
-function note(out: Float64Array, midi: number, t0: number, t1: number) {
-	const f = hz(midi);
-	// lower notes ring longer, as on a piano
-	const T1 = 1.5 * (261.6 / f) ** 0.35;
-	const start = Math.round(t0 * RATE), stop = Math.round(t1 * RATE), release = Math.round(0.12 * RATE);
-	const attack = Math.round(0.004 * RATE);
-	for (let k = 1; k <= PARTIALS; k++) {
-		const fk = k * f * Math.sqrt(1 + B * k * k);
-		if (fk > 9000) break;
-		const a = strike(k);
-		// two-stage decay: a prompt sound that dies quickly and a quieter aftersound that lingers
-		const T = T1 / (1 + 0.45 * (k - 1)), Tlong = 3.5 * T;
-		const phase = (k * 2.399) % (2 * Math.PI); // fixed, so the build is the same every time
-		for (const s of [-1, 1]) {
-			const w = (2 * Math.PI * fk * 2 ** ((s * DETUNE) / 2 / 1200)) / RATE;
-			for (let n = start; n < Math.min(out.length, stop + release); n++) {
-				const i = n - start, t = i / RATE;
-				let env = 0.75 * Math.exp(-t / T) + 0.25 * Math.exp(-t / Tlong);
-				if (i < attack) env *= 0.5 - 0.5 * Math.cos((Math.PI * i) / attack);
-				if (n >= stop) env *= 0.5 + 0.5 * Math.cos((Math.PI * (n - stop)) / release);
-				out[n] += 0.5 * a * env * Math.sin(w * i + phase);
-			}
-		}
-	}
-}
-
-/** the notes of a sound in the order played, and when each is struck and damped */
-function score(t: Thing, start: number, played: Played) {
+/** when each note is struck and let go, and how long the sound is. In turn: two notes 0.8 s apart, three or four 0.6 s
+ * apart, each let go as the next is struck (a legato hand; it fades over the app's STOP), the last ringing 1.2 s
+ * before the sound fades out over 0.3 s. Together: every note at the app's 1/√n, ringing 1.6 s, then the fade. */
+function score(t: Thing, start: number, played: Played): { notes: (Strike & { m: number })[]; length: number } {
 	const up = t.notes.map((n) => start + n);
-	if (played === 'together') return { notes: up.map((m) => ({ m, t0: 0, t1: 1.6 })), length: 1.75 };
-	// in turn: each note damped as the next is struck; two notes at a slower pace than four
+	if (played === 'together') return { notes: up.map((m) => ({ m, key: m, at: 0, gain: gainFor(up.length) })), length: 1.9 };
 	const ms = played === 'falling' ? t.notes.map((n) => start - n) : up;
 	const step = ms.length === 2 ? 0.8 : 0.6;
 	const last = (ms.length - 1) * step;
-	return { notes: ms.map((m, i) => ({ m, t0: i * step, t1: i === ms.length - 1 ? last + 1.2 : (i + 1) * step - 0.02 })), length: last + 1.35 };
-}
-
-/** to one loudness: RMS to -18 dBFS; then the few milliseconds where all of a chord's notes are struck at once,
- * which would peak above -3 dBFS (an MP3 overshoots its source a little), are turned down just there: the gain
- * needed at each sample, the least of it within 5 ms either side, averaged over 5 ms either side (so it changes
- * smoothly and never lets a peak through) */
-function normalise(x: Float64Array) {
-	let s = 0;
-	for (const v of x) s += v * v;
-	const g = 10 ** (-18 / 20) / Math.sqrt(s / x.length);
-	for (let i = 0; i < x.length; i++) x[i] *= g;
-	const ceiling = 10 ** (-3 / 20), W = Math.round(0.005 * RATE), n = x.length;
-	const need = Float64Array.from(x, (v) => Math.min(1, ceiling / Math.max(1e-9, Math.abs(v))));
-	const least = new Float64Array(n);
-	for (let i = 0; i < n; i++) { let m = 1; for (let j = Math.max(0, i - W); j <= Math.min(n - 1, i + W); j++) m = Math.min(m, need[j]); least[i] = m; }
-	for (let i = 0; i < n; i++) {
-		let a = 0, c = 0;
-		for (let j = Math.max(0, i - W); j <= Math.min(n - 1, i + W); j++) { a += least[j]; c++; }
-		x[i] *= a / c;
-	}
-}
-
-function mp3(x: Float64Array): Buffer {
-	const pcm = Int16Array.from(x, (v) => Math.max(-32768, Math.min(32767, Math.round(v * 32767))));
-	const enc = new Mp3Encoder(1, RATE, KBPS), parts: Int8Array[] = [];
-	for (let i = 0; i < pcm.length; i += 1152) parts.push(enc.encodeBuffer(pcm.subarray(i, i + 1152)));
-	parts.push(enc.flush());
-	return Buffer.concat(parts.map((p) => Buffer.from(p.buffer, p.byteOffset, p.byteLength)));
+	return { notes: ms.map((m, i) => ({ m, key: m, at: i * step, gain: 1, until: i === ms.length - 1 ? undefined : (i + 1) * step })), length: last + 1.5 };
 }
 
 // --- how alike things sound (the embedding) ---------------------------------------------------------------------
+
+// The roughness below is of a model piano tone, not of the recordings: 16 partials, a little stretched as a piano
+// string's are, falling in loudness with height. (It was the tone of this dataset's sounds before they were played
+// on Knack's sampled piano; it is kept so that the embedding stays as it was, and a model of a tone is what Sethares'
+// measure is defined on.)
+const PARTIALS = 16;
+const B = 0.00025; // inharmonicity: partial k is at k f sqrt(1 + B k²), as on a piano string
+/** how loud each partial is: falling with k, with a dip near the 8th (a hammer striking 1/8 of the way along) */
+const strike = (k: number) => (0.25 + 0.75 * Math.abs(Math.sin((Math.PI * k) / 8.5))) / k ** 1.15;
 
 /** Sethares' sensory dissonance (roughness) of two pure tones, after Plomp and Levelt */
 function rough(f1: number, f2: number, a1: number, a2: number) {
@@ -162,7 +115,7 @@ function rough(f1: number, f2: number, a1: number, a2: number) {
 	return Math.min(a1, a2) * (Math.exp(-3.5 * s * d) - Math.exp(-5.75 * s * d));
 }
 
-/** the roughness between the notes of a chord of this tone (between partials of different notes only) */
+/** the roughness between the notes of a chord of that model tone (between partials of different notes only) */
 function roughness(midis: number[]) {
 	let r = 0;
 	for (let i = 0; i < midis.length; i++) for (let j = i + 1; j < midis.length; j++) {
@@ -215,6 +168,7 @@ const rows: Record<string, unknown>[] = [];
 const roughMax = Math.max(...things.map((t) => roughness(t.notes.map((n) => 60 + n))));
 const alike = new Map(things.map((t) => [t.id, soundsAlike(t, roughMax)]));
 const vectors: number[][] = [];
+const gains: number[] = [], held: number[] = [];
 
 for (const t of things) {
 	const chord = t.notes.length > 2;
@@ -223,10 +177,10 @@ for (const t of things) {
 		// file names must differ by more than case (m2 and M2 are one file on a Mac): minor2, major2
 		const id = `${t.id.replace(/^m(?=\d$)/, 'minor').replace(/^M(?=\d$)/, 'major')}-${played}-${start.replace('♭', 'b').replace('♯', 's').toLowerCase()}`;
 		const sc = score(t, midi, played);
-		const x = new Float64Array(Math.round(sc.length * RATE));
-		for (const n of sc.notes) note(x, n.m, n.t0, n.t1);
-		normalise(x);
-		await writeFile(join(media, `${id}.mp3`), mp3(x));
+		const x = render(sc.notes, sc.length);
+		const want = 10 ** ((TARGET - loudness(x)) / 20);
+		const down = write(join(media, `${id}.mp3`), x, want);
+		gains.push(20 * Math.log10(want)); held.push(down);
 		rows.push({
 			id,
 			sound: `media/${id}.mp3`,
@@ -262,7 +216,11 @@ const columns = {
 	practices: [
 		{ name: 'Name what you hear', columns: ['sound', 'name'] },
 		{ name: 'What kind is it?', columns: ['sound', 'kind'] },
-		{ name: 'What notes are in it?', columns: ['sound', 'formula'] }
+		{ name: 'What notes are in it?', columns: ['sound', 'formula'] },
+		// the keyboard: what is heard, played on it, from the note it starts on; keys seen (and heard), named. The starting
+		// note is shown so that a sound can be played back without absolute pitch, and a name played where a row has it
+		{ name: 'Play what you hear', columns: ['sound', 'notes'], always: ['starting note'] },
+		{ name: 'Name the keys', columns: ['notes', 'name'], always: ['starting note'] }
 	],
 	columns: [
 		{ name: 'sound', type: 'plain', media: 'audio', label: 'Sound' },
@@ -273,10 +231,13 @@ const columns = {
 		{ name: 'formula', type: 'parts', label: 'Notes above the root' },
 		{ name: 'played', type: 'plain', label: 'Played', order: ['in turn, rising', 'in turn, falling', 'together'] },
 		{ name: 'starting note', type: 'plain', label: 'Starting note', order: START.map(([n]) => n) },
-		{ name: 'notes', type: 'ranking', label: 'Notes played' }
+		// keys on a piano keyboard; these are sounds at particular pitches, so the octave matters (A3 C4 is not A4 C5)
+		{ name: 'notes', type: 'notes', octave: true, label: 'Keys' }
 	]
 };
 await writeFile(join(OUT, 'columns.json'), JSON.stringify(columns, null, 1) + '\n');
 
 const files = await readdir(media);
+const limited = held.filter((d) => d < -0.05);
+console.log(`gain from the app's level: ${Math.min(...gains).toFixed(1)} to ${Math.max(...gains).toFixed(1)} dB; strike turned down in ${limited.length} sounds, at most ${(-Math.min(0, ...held)).toFixed(1)} dB (median of those ${(-limited.sort((a, b) => a - b)[limited.length >> 1] || 0).toFixed(1)} dB)`);
 console.log(`${rows.length} rows, ${files.length} sounds, embedding ${vectors.length}×${dim}`);
