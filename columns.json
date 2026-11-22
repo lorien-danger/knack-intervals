@@ -42,8 +42,7 @@
     "name"
    ],
    "always": [
-    "starting note",
-    "played"
+    "starting note"
    ]
   }
  ],

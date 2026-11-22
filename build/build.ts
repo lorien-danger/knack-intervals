@@ -217,9 +217,10 @@ const columns = {
 		{ name: 'Name what you hear', columns: ['sound', 'name'] },
 		{ name: 'What kind is it?', columns: ['sound', 'kind'] },
 		{ name: 'What notes are in it?', columns: ['sound', 'formula'] },
-		// the keyboard: what is heard, played on it, from the note it starts on; and keys seen (and heard), named
+		// the keyboard: what is heard, played on it, from the note it starts on; keys seen (and heard), named. The starting
+		// note is shown so that a sound can be played back without absolute pitch, and a name played where a row has it
 		{ name: 'Play what you hear', columns: ['sound', 'notes'], always: ['starting note'] },
-		{ name: 'Name the keys', columns: ['notes', 'name'], always: ['starting note', 'played'] }
+		{ name: 'Name the keys', columns: ['notes', 'name'], always: ['starting note'] }
 	],
 	columns: [
 		{ name: 'sound', type: 'plain', media: 'audio', label: 'Sound' },
