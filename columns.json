@@ -24,6 +24,27 @@
     "sound",
     "formula"
    ]
+  },
+  {
+   "name": "Play what you hear",
+   "columns": [
+    "sound",
+    "notes"
+   ],
+   "always": [
+    "starting note"
+   ]
+  },
+  {
+   "name": "Name the keys",
+   "columns": [
+    "notes",
+    "name"
+   ],
+   "always": [
+    "starting note",
+    "played"
+   ]
   }
  ],
  "columns": [
@@ -81,8 +102,9 @@
   },
   {
    "name": "notes",
-   "type": "ranking",
-   "label": "Notes played"
+   "type": "notes",
+   "octave": true,
+   "label": "Keys"
   }
  ]
 }
